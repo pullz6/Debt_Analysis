@@ -10,10 +10,24 @@
 </head>
 <body>
     <h1>{{title}} Debt Analysis</h1>
-    <div id='chart' class='chart'”></div>
+    <div id='chart1' class='chart1'></div>
+    <div id='chart2' class='chart2'></div>
+    <div id='chart3' class='chart3'></div>
+    <div id='chart4' class='chart4'></div>
 </body>
 <script>
     var graphs = {{graphJSON | safe}};
-    Plotly.plot('chart',graphs,{});
+    Plotly.plot('chart1',graphs,{});
+
+    var graph2 = {{graphJSON2 | safe}};
+    Plotly.plot('chart2',graph2,{});
+
+    var graph3 = {{graphJSON3 | safe}};
+    Plotly.plot('chart3',graph3,{});
+
+    var graph4 = {{graphJSON4 | safe}};
+    Plotly.plot('chart4',graph4,{});
+    
+    
 </script>
 </html>
